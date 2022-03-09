@@ -1,0 +1,110 @@
+<!-- function tableSearch() {
+  var input = document.getElementById("searchInput")    
+  var check1= input.value.toUperCase();
+  var Table1= document.getElementById("myTable")
+  var insideTable= Table1.getElementById("tr") -->
+<!-- for( let i=0; i<tr.length;i++){
+   var td = tr[i].getElementByTagName("td")
+    if(td){
+     var txtValue = td.textContent || td.innerText;
+     if (txtValue.toUperCase().indexOf(check1)>-1) {
+       tr[i].style.display="";
+
+     }else{
+      tr[i].style.display=none;
+     }
+    }
+  }
+}
+
+
+
+
+
+checkButten.addEventListener("click", function insideData(){
+  var rowLength = oTable.rows.length;
+  for (i = 0; i < rowLength; i++){
+  var oCells = oTable.rows.item(i).cells;
+  var cellLength = oCells.length;
+  for(var j = 0; j < cellLength; j++){
+    var cellVal = oCells.item(j).innerHTML;
+          console.log(cellVal);
+       }
+  // console.log(cellLength);
+}
+  console.log(searchInput.value);
+})
+
+
+var oTable = document.getElementById('myTable');
+var searchInput=document.getElementById("#searchInput");
+console.log(searchInput);
+var outputDiv = document.querySelector("#output");
+const checkButten=document.querySelector("#check-button");
+var rowLength = oTable.rows.length;
+for (i = 0; i < rowLength; i++){
+  var oCells = oTable.rows.item(i).cells;
+  var cellLength = oCells.length;
+  for(var j = 0; j < cellLength; j++){
+    var cellVal = oCells.item(j).innerHTML;
+          console.log(cellVal);
+       }
+  // console.log(cellLength);
+} -->
+
+
+    
+
+    <script>
+      // var Btn = document.querySelector("#checkBtn");
+      // var inp = document.querySelector("#inputA");
+      // var outputDiv = document.querySelector("#output");
+      // function clickHandler() {
+        // var inp = document.querySelector("#inputA");
+        // console.log(inp.value);
+        // outputDiv.innerText = inp.value;
+      // }
+      // Btn.addEventListener("click", clickHandler);
+
+      const checkTable =()=>{
+        let data=document.getElementById('inputA').value.toUpperCase();
+        console.log(data);
+        let myTable = document.getElementById("myTable")
+        let tr = myTable.getElementsByTagName('tr');
+        for(var i=0; i<tr.length;i++){
+          let td =tr[i].getElementsByTagName('td')[0];
+          if (td) {
+            let textValue = td.textContent||td.innerHTML;
+            console.log(textValue);
+            if (textValue.toUpperCase().indexOf(data)>-1) {
+              tr[i].style.display="";
+            }else{
+              tr[i].style.display="none"; 
+            }           
+          }
+        }
+      }
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
